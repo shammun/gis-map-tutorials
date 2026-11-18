@@ -1,0 +1,23 @@
+{
+  "name": "lens-map-clip",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The 41-second clip in which three lenses ride Storm Ciaran (Remotion)",
+  "author": "Shammunul Islam",
+  "license": "MIT",
+  "scripts": {
+    "studio": "remotion studio src/index.ts --public-dir=../../out/lens_layers",
+    "render": "remotion render src/index.ts LensMapClip out/lens_map.mp4 --public-dir=../../out/lens_layers",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.537",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "remotion": "4.0.537"
+  },
+  "devDependencies": {
+    "@types/react": "19.3.0",
+    "typescript": "7.0.2"
+  }
+}

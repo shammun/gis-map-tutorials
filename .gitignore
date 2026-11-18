@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv*/
+venv/
+.ipynb_checkpoints/
+
+# what the tutorials write when they run
+out/
+lens_out/
+lens_cache/
+gismaps_work/
+gismaps_data/
+frames_*/
+*.nbconvert.log
+
+# editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Remotion projects
+node_modules/
+remotion/*/out/
+package-lock.json
+
+# caches of the any-place lens map
+lens_cache/
+*.zip
+remotion/*/public/

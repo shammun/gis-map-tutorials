@@ -1,0 +1,28 @@
+{
+  "name": "glass-stack-remotion",
+  "version": "1.0.0",
+  "description": "The glass-pane globe stack as a Remotion + three.js film (NOAA GFS from dynamical.org)",
+  "author": "Shammunul Islam",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio src/index.ts --public-dir=public",
+    "typecheck": "tsc --noEmit",
+    "still": "remotion still src/index.ts GlassStack out/glass_stack_remotion.png --frame=480 --public-dir=public",
+    "render": "remotion render src/index.ts GlassStack out/glass_stack_remotion.mp4 --public-dir=public"
+  },
+  "dependencies": {
+    "@react-three/fiber": "9.8.2",
+    "@remotion/cli": "4.0.537",
+    "@remotion/three": "4.0.537",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "remotion": "4.0.537",
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "@types/react": "19.3.0",
+    "@types/three": "0.186.0",
+    "typescript": "7.0.2"
+  }
+}

@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gismaps"
+version = "0.1.0"
+description = "Code behind the GIS map tutorials: seven poster/animation map styles and lens maps, on open data"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Shammunul Islam" }]
+# No version pins on numpy / matplotlib / pandas: on Google Colab the preinstalled ones are used (no runtime restart).
+dependencies = [
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "pillow",
+    "pyproj>=3.7.1",      # PROJ 9.6+: the Spilhaus projection of style 5
+    "cartopy",            # Natural Earth land and borders
+    "cmocean",
+    "shapely>=2.0",
+    "geopandas",
+    "xarray",
+    "netCDF4",
+    "imageio-ffmpeg",     # an ffmpeg for the animations where none is on the PATH
+]
+
+[project.optional-dependencies]
+cloud = ["zarr", "gcsfs", "h5netcdf", "pydap", "icechunk"]   # ERA5 from ARCO-ERA5, ETOPO through OPeNDAP, GFS from dynamical.org
+satellite = ["pystac-client", "rasterio"]               # style 7, public STAC route
+gee = ["earthengine-api"]                               # style 7, optional Google Earth Engine route
+notebooks = ["jupyterlab", "nbconvert", "ipykernel", "ipywidgets"]   # ipywidgets: the optional place picker panel
+all = ["gismaps[cloud,satellite,gee,notebooks]"]
+
+[project.urls]
+Homepage = "https://shammun.github.io/gis-map-tutorials/"
+Repository = "https://github.com/shammun/gis-map-tutorials"
+
+[tool.setuptools.packages.find]
+include = ["gismaps*"]

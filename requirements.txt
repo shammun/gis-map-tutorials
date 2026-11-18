@@ -1,0 +1,26 @@
+# Everything the ten tutorials use (the same as `pip install -e ".[all]"`). Python 3.10 or newer.
+numpy
+scipy
+matplotlib
+pillow
+pyproj>=3.7.1
+cartopy
+cmocean
+shapely>=2.0
+geopandas
+xarray
+netCDF4
+imageio-ffmpeg
+# ERA5 straight from the cloud store, ETOPO through OPeNDAP (lens map 2, prepare_data)
+zarr
+gcsfs
+h5netcdf
+pydap
+# style 7: Sentinel-2 through public STAC; optional Google Earth Engine route
+pystac-client
+rasterio
+earthengine-api
+# notebooks
+jupyterlab
+nbconvert
+ipykernel
